@@ -5,8 +5,8 @@ from flask import jsonify, Flask
 app = Flask(__name__)
 
 base_url = "http://api.openweathermap.org/data/2.5/weather?"
-api_key = "173ef18648a9a9f17c2f5bec33cbcd2b"
-city = "Jaipur"
+api_key = "YOUR_API_KEY"
+city = "CITY"
 
 
 def k_to_C_to_f(kelvin):
