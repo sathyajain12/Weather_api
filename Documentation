@@ -1,0 +1,58 @@
+Weather API Documentation
+
+Description
+The Weather API is a Flask-based web service that provides real-time weather information for a given city. It utilizes the OpenWeatherMap API to retrieve weather data such as temperature, humidity, wind speed, and more.
+
+Base URL
+http://localhost:5000 (when running locally)
+
+Endpoints
+Get Weather Data
+Endpoint: /weather/<city>
+Method: GET
+Parameters:
+<city>: The name of the city for which you want to retrieve weather data.
+Description: Retrieves the latest weather information for the specified city.
+Example: http://localhost:5000/weather/Jaipur
+Response
+The API responds with a JSON object containing the following weather data:
+
+temperature_celsius: The temperature in Celsius.
+temperature_fahrenheit: The temperature in Fahrenheit.
+feels_like_celsius: The "feels like" temperature in Celsius.
+feels_like_fahrenheit: The "feels like" temperature in Fahrenheit.
+humidity: The humidity percentage.
+wind_speed: The wind speed in Km/h.
+description: A brief description of the weather conditions.
+sunrise_time: The local time of sunrise.
+sunset_time: The local time of sunset.
+
+Example response
+{
+  "temperature_celsius": 25.0,
+  "temperature_fahrenheit": 77.0,
+  "feels_like_celsius": 27.5,
+  "feels_like_fahrenheit": 81.5,
+  "humidity": 60,
+  "wind_speed": 10,
+  "description": "Partly cloudy",
+  "sunrise_time": "2023-06-17 05:32:12",
+  "sunset_time": "2023-06-17 19:20:37"
+}
+
+
+Usage
+To use the Weather API, follow these steps:
+
+Make sure you have Python installed on your system.
+Clone the GitHub repository: [insert link to your GitHub repository].
+Install the required dependencies by running pip install -r requirements.txt.
+Start the Flask server by running python main.py.
+Send a GET request to the desired endpoint, providing the city name as a parameter.
+Receive a JSON response with the weather data for the specified city.
+Technologies Used
+Python
+Flask
+OpenWeatherMap API
+Credits
+This project utilizes the OpenWeatherMap API for weather data retrieval.
